@@ -1,4 +1,29 @@
 extends layout.pug 
 
 block content 
-    p yeni çağrı
+
+    p Arıza Bildirimi işlemine başlayalım
+    form(action="", method="post", id="formcagri")
+        label(for="sicil") 
+            span Sicil :
+            input(type='text', name='sicil', id='sicil', placeholder='Sicilinizi giriniz..')  
+        label(for="birim") 
+            span Biriminizi Seçiniz :
+            select(name='birim', id='birim')
+                option(value=0) Biriminizi Seçiniz 
+                option(value=1) Bilgi Teknolojileri
+                option(value=2) Personel
+                option(value=2) Güvenlik
+                option(value=2) TEM
+                option(value=2) KOM
+                option(value=2) İs
+        input(type='submit', value='Devam et')
+
+        section 
+            a(href='#') Yetki işlemleri
+            a(href='#') Parola İşlemleri
+            a(href='#') Malzeme Talebi
+            a(href='#') Cihaz Arızası
+            a(href='#') Program Kurulumu
+            a(href='#') Yazıcı Kurulumu
+            a(href='#') Tarayıcı Kurulumu
